@@ -1,0 +1,134 @@
+* {
+    margin: 0;/* remove a margem padrão */
+    padding: 0;/* remove o preenchimento padrão */
+    box-sizing: border-box;/* garante que o padding e a borda sejam incluídos nas dimensões totais dos elementos, facilitando o controle do layout e evitando problemas de dimensionamento */
+}
+
+body {
+    display: flex;/* define o layout do corpo da página como flexbox, permitindo um alinhamento e distribuição flexível dos elementos filhos */
+    justify-content: center;/* centraliza os elementos filhos horizontalmente dentro do corpo da página, garantindo que o conteúdo fique alinhado no centro da tela */
+    align-items: center;/* centraliza os elementos filhos verticalmente dentro do corpo da página, garantindo que o conteúdo fique alinhado no centro da tela */
+    height: 100vh;/* define a altura do corpo da página como 100% da altura da janela de visualização, garantindo que o conteúdo ocupe toda a altura disponível e fique centralizado verticalmente */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.conteiner {
+    background: linear-gradient(120deg, #000000, #b0b0b0);
+    width: 100%;/* define a largura do contêiner como 100% da largura disponível, permitindo que ele se ajuste ao tamanho da tela e ocupe toda a largura disponível */
+    max-width: 400px;/* define a largura máxima do contêiner como 400 pixels, garantindo que ele não fique muito largo em telas maiores e mantenha uma aparência consistente */
+    padding: 20px;/* adiciona um preenchimento interno de 20 pixels ao redor do conteúdo do contêiner, criando espaço entre o conteúdo e as bordas do contêiner para melhorar a legibilidade e a estética */
+    border-radius: 20px;/* arredonda os cantos do contêiner com um raio de 20 pixels, proporcionando uma aparência mais suave e moderna ao design da página */
+    filter: drop-shadow(0 0 20px #575757);/* adiciona uma sombra ao redor do contêiner, criando um efeito de profundidade e destacando o contêiner em relação ao plano de fundo, melhorando a estética visual da página */
+}
+
+.conteiner_principal {
+    padding: 20px;/* adiciona um preenchimento interno de 20 pixels ao redor do conteúdo do contêiner principal, criando espaço entre o conteúdo e as bordas do contêiner para melhorar a legibilidade e a estética */
+    display: flex;/* define o layout do contêiner principal como flexbox, permitindo um alinhamento e distribuição flexível dos elementos filhos */
+    flex-direction: column;/* organiza os elementos filhos em uma coluna, empilhando-os verticalmente, o que é ideal para um formulário de login onde os campos e botões são geralmente dispostos um abaixo do outro */
+    align-items: center;/* centraliza os elementos filhos horizontalmente dentro do contêiner principal, garantindo que o conteúdo fique alinhado no centro do contêiner para uma aparência mais equilibrada e profissional */
+    gap: 20px;/* adiciona um espaço de 20 pixels entre os elementos filhos do contêiner principal, melhorando a legibilidade e a estética ao criar uma separação visual clara entre os campos do formulário, botões e outros elementos, evitando que fiquem muito próximos uns dos outros */
+    border-radius: 20px;/* arredonda os cantos do contêiner principal com um raio de 20 pixels, proporcionando uma aparência mais suave e moderna ao design da página, complementando o estilo do contêiner externo */
+    background-color: #fff;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#password {
+    position: absolute;/* posiciona o campo de senha de forma absoluta em relação ao contêiner pai, permitindo que ele seja colocado em um local específico dentro do layout, como ao lado do campo de email ou em uma posição fixa na tela */
+    width: 255px;/* define a largura do campo de senha como 255 pixels, garantindo que ele tenha um tamanho adequado para acomodar a entrada de senha e se encaixe bem no layout do formulário */
+}
+
+.btnImg {
+    position: relative;/* posiciona o botão de imagem de forma relativa, permitindo que ele seja posicionado em relação ao seu local normal no fluxo do documento, o que é útil para ajustar sua posição em relação ao campo de senha ou outros elementos do formulário */
+    margin-left: 215px;/* adiciona uma margem à esquerda de 215 pixels ao botão de imagem, posicionando-o adequadamente em relação ao campo de senha, garantindo que ele fique alinhado e visualmente conectado ao campo de senha para facilitar a interação do usuário */
+    background-color: transparent;
+    border: none;/* remove a borda padrão do botão, criando um visual mais limpo e moderno, especialmente quando o botão é representado por uma imagem, permitindo que a imagem seja o foco principal sem distrações visuais de bordas */
+    cursor: pointer;/* altera o cursor para um ponteiro quando o usuário passa o mouse sobre o botão, indicando que ele é clicável e melhorando a experiência do usuário ao fornecer feedback visual sobre a interatividade do elemento */
+}
+
+.btnImg img {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);/* inverte as cores da imagem, tornando-a adequada para fundos escuros, garantindo que o ícone de visibilidade de senha seja claramente visível e se destaque contra o plano de fundo do formulário, melhorando a usabilidade e a estética do design */
+}
+
+#esqueci {
+    margin-left: 15px;
+}
+
+a {
+    color: #060606;
+}
+
+
+
+.lembrete {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button[type="submit"] {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {/* define o estilo do botão de envio quando o usuário passa o mouse sobre ele, proporcionando feedback visual e melhorando a experiência do usuário ao indicar que o botão é interativo e pronto para ser clicado */
+    transition: background-color 0.3s ease;/* adiciona uma transição suave para a mudança de cor de fundo do botão, melhorando a experiência do usuário ao fornecer feedback visual quando o botão é hoverado, tornando a interação mais agradável e fluida */
+    filter: drop-shadow(0 0 5px #747474);/* adiciona uma sombra ao redor do botão de envio quando o usuário passa o mouse sobre ele, criando um efeito de destaque e profundidade, melhorando a estética visual do botão e indicando que ele é interativo e pronto para ser clicado */
+}
+
+input[type="checkbox"]:hover {/* define o estilo do checkbox quando o usuário passa o mouse sobre ele, proporcionando feedback visual e melhorando a experiência do usuário ao indicar que o checkbox é interativo e pode ser selecionado ou desmarcado */
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px #747474);/* adiciona uma sombra ao redor do checkbox quando o usuário passa o mouse sobre ele, criando um efeito de destaque e profundidade, melhorando a estética visual do checkbox e indicando que ele é interativo e pode ser selecionado ou desmarcado */
+}
+@media (max-width: 500px) {/* define um ponto de interrupção para telas com largura máxima de 500 pixels, permitindo que o layout da página se ajuste e se torne mais responsivo em dispositivos móveis, garantindo uma melhor experiência do usuário em telas menores */
+    .conteiner {
+        width: 90%;
+    }
+
+    #password {
+        width: 63%;
+    }
+
+    .btnImg {
+        margin-left: 85%;
+    }
+    #esqueci {
+        margin-left: 0;
+    }
+}
+@media (max-width: 400px) {/* define um ponto de interrupção para telas com largura máxima de 400 pixels, permitindo que o layout da página se ajuste ainda mais para dispositivos móveis menores, garantindo que o conteúdo seja legível e acessível em telas muito pequenas */
+    p{
+        text-align: center;
+    }
+    #password {
+        width: 60%;
+    }
+    .btnImg {
+        margin-left: 80%;
+    }
+ .lembrete input {
+        align-items: center;
+        margin-left: 40px;
+    }
+
+    #esqueci {
+        margin-left: 30px;
+    }
+}
